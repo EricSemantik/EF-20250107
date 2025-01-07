@@ -1,0 +1,15 @@
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\bin\Debug\net6.0\HopitalConsoleMatmut.exe
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\bin\Debug\net6.0\HopitalConsoleMatmut.deps.json
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\bin\Debug\net6.0\HopitalConsoleMatmut.runtimeconfig.json
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\bin\Debug\net6.0\HopitalConsoleMatmut.dll
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\bin\Debug\net6.0\HopitalConsoleMatmut.pdb
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.csproj.AssemblyReference.cache
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.AssemblyInfoInputs.cache
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.AssemblyInfo.cs
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.csproj.CoreCompileInputs.cache
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.dll
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\refint\HopitalConsoleMatmut.dll
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.pdb
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\HopitalConsoleMatmut.genruntimeconfig.cache
+C:\Users\eric\source\repos\HopitalConsoleMatmut\HopitalConsoleMatmut\obj\Debug\net6.0\ref\HopitalConsoleMatmut.dll
