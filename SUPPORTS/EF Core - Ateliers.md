@@ -83,3 +83,29 @@ CREATE TABLE customer (
 
 - Pensez à créer la nouvelle table dans la BDD (Add-Migration ...)
 - Que remarques-vous dans la BDD ?
+
+## Atelier 3
+
+- Créer une classe Adresse
+
+```c#
+public class Adresse {
+    public int Id { get ; set ;}
+    public string Rue {get;set;}
+    public string CodePostal { get ; set ;}
+    public string Ville { get ; set ;}
+}
+```
+
+- En utilisant la Fluent API, effectuer un mapping avec pour cible :
+
+```sql
+CREATE TABLE adress (
+	id int NOT NULL IDENTITY PRIMARY KEY,
+	street NVARCHAR(max),
+	zipcode NVARCHAR(max),
+	city NVARCHAR(max)
+)
+```
+
+- Modifier le Program et le EFContext pour pouvoir créer une Adresse en BDD
