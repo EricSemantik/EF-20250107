@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HopitalConsoleMatmut.Model;
 using Microsoft.Data.SqlClient;
+using HopitalConsoleMatmut.Repository.Sql;
 
 namespace HopitalConsoleMatmut
 {
@@ -17,7 +18,7 @@ namespace HopitalConsoleMatmut
         public IConsultationRepository ConsultationRepo { get; } = new ConsultationMemoryRepository();
         public IEmployeRepository EmployeRepo { get; } = new EmployeMemoryRepository();
         public IPatientRepository PatientRepo { get; } = new PatientMemoryRepository();
-        public ISalleRepository SalleRepo { get; } = new SalleMemoryRepository();
+        public ISalleRepository SalleRepo { get; } = new SalleSqlRepository();
         public FileAttente FileAttente { get; } = new FileAttente();
 
         private HopitalApplication() { }

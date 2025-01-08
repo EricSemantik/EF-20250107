@@ -15,11 +15,17 @@ internal class Program
     static bool enPause = false;
     static void Main()
     {
-        //Salle salle = new Salle { Nom = "Salle 2", Dispo = true };
+        //Salle salleOrange = new Salle { Nom = "Salle Orange", Dispo = true };
 
-        //HopitalApplication.GetInstance().SalleRepo.Add(salle);
+        //HopitalApplication.GetInstance().SalleRepo.Add(salleOrange);
 
 
+
+        //foreach(Salle salle in HopitalApplication.GetInstance().SalleRepo.GetAllDispo()) {
+        //    Console.WriteLine("salle = " + salle.Nom);
+        //}
+
+        //Console.WriteLine("salle.getbyid=" + HopitalApplication.GetInstance().SalleRepo.GetById(1));
 
         try
         {
@@ -98,6 +104,7 @@ internal class Program
                 int idSalle = SaisieInt("Dans quelle salle ?");
                 Salle salle = HopitalApplication.GetInstance().SalleRepo.GetById(idSalle);
                 salle.Dispo = false;
+                HopitalApplication.GetInstance().SalleRepo.Update(salle);
                 ((Medecin)connected).Salle = salle;
             }
             MenuMedecin();
