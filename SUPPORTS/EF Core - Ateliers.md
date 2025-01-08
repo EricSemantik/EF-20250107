@@ -69,3 +69,17 @@ Add-Migration Initial
 Update-Database
 ```
 
+## Atelier 2
+
+- En utilisant les annotations, effectuer un mapping avec pour cible :
+
+```sql
+CREATE TABLE customer (
+	id int NOT NULL IDENTITY PRIMARY KEY,
+	lastname NVARCHAR(max),
+	firstname NVARCHAR(max)
+)
+```
+
+- Pensez à créer la nouvelle table dans la BDD (Add-Migration ...)
+- Que remarques-vous dans la BDD ?
