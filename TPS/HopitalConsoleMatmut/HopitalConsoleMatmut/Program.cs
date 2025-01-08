@@ -2,8 +2,10 @@
 using HopitalConsoleMatmut.Model;
 using HopitalConsoleMatmut.Repository;
 using HopitalConsoleMatmut.Repository.Memory;
+using Microsoft.Data.SqlClient;
 using System;
 using System.ComponentModel;
+using System.Data.Common;
 using System.Numerics;
 
 internal class Program
@@ -16,6 +18,7 @@ internal class Program
         //Salle salle = new Salle { Nom = "Salle 2", Dispo = true };
 
         //HopitalApplication.GetInstance().SalleRepo.Add(salle);
+
 
 
         try
@@ -295,5 +298,25 @@ internal class Program
     {
         Console.WriteLine(msg);
         return Boolean.Parse(Console.ReadLine());
+    }
+
+    public static void ExempleADO()
+    {
+        using (var connection = HopitalApplication.GetInstance().GetConnection())
+        {
+            connection.Open();
+            //connection.ChangeDatabase("Hopital_ADO");
+            SqlCommand commandeLecture = connection.CreateCommand();
+            commandeLecture.CommandText = "SELECT Id, Nom, Dispo FROM [dbo].[Salles]";
+            using (DbDataReader reader = commandeLecture.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Console.WriteLine("\tId: " + reader["Id"]
+                        + " Nom: " + reader["Nom"]
+                        + " Dispo: " + reader["Dispo"]);
+                }
+            }
+        }
     }
 }

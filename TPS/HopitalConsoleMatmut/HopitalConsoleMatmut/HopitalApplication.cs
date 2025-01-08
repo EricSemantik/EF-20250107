@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HopitalConsoleMatmut.Model;
+using Microsoft.Data.SqlClient;
 
 namespace HopitalConsoleMatmut
 {
@@ -16,7 +17,7 @@ namespace HopitalConsoleMatmut
         public IConsultationRepository ConsultationRepo { get; } = new ConsultationMemoryRepository();
         public IEmployeRepository EmployeRepo { get; } = new EmployeMemoryRepository();
         public IPatientRepository PatientRepo { get; } = new PatientMemoryRepository();
-        public ISalleRepository SalleRepo { get; } = new SalleFileRepository(@"C:\Users\eric\Documents\Cours C#\salles.csv");
+        public ISalleRepository SalleRepo { get; } = new SalleMemoryRepository();
         public FileAttente FileAttente { get; } = new FileAttente();
 
         private HopitalApplication() { }
@@ -29,6 +30,14 @@ namespace HopitalConsoleMatmut
             }
 
             return _instance;
+        }
+
+        public SqlConnection GetConnection()
+        {
+            return new SqlConnection()
+            {
+                ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Hopital_ADO;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+            };
         }
     }
 }
