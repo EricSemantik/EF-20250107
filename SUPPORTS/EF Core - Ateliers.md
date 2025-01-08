@@ -109,3 +109,27 @@ CREATE TABLE adress (
 ```
 
 - Modifier le Program et le EFContext pour pouvoir créer une Adresse en BDD
+
+## Atelier 4
+
+- Modifier le mapping pour arriver à ce schéma de BDD
+
+```sql
+CREATE TABLE customer (
+	id int NOT NULL IDENTITY PRIMARY KEY,
+	lastname NVARCHAR(100),
+	firstname NVARCHAR(100) NULL,
+	email NVARCHAR(255) UNIQUE,
+	adress_id INT NULL,
+	FOREIGN KEY (adress_id) REFERENCES adress(id)
+)
+
+CREATE TABLE adress (
+	id int NOT NULL IDENTITY PRIMARY KEY,
+	street NVARCHAR(255) NULL,
+	zipcode NVARCHAR(10) NULL,
+	city NVARCHAR(100) NULL
+)
+```
+
+- Modifier le Program pout vérifier le bon fonctionnement
