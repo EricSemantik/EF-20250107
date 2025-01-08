@@ -119,7 +119,7 @@ CREATE TABLE customer (
 	id int NOT NULL IDENTITY PRIMARY KEY,
 	lastname NVARCHAR(100),
 	firstname NVARCHAR(100) NULL,
-	email NVARCHAR(255) UNIQUE,
+	email NVARCHAR(255) NULL UNIQUE,
 	adress_id INT NULL,
 	FOREIGN KEY (adress_id) REFERENCES adress(id)
 )
