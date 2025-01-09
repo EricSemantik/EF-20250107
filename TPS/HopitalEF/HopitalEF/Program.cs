@@ -10,7 +10,10 @@ internal class Program
         {
             var salle206 = new Salle { Nom = "SULTAN", Dispo = true };
 
-            context.Salles.Add(salle206);   
+            context.Salles.Add(salle206);
+
+            var dupont = new Medecin { Civilite = Civilite.M, Nom = "DUPONT", Prenom = "Pierre", Login = "DUPONTP", MotDePasse = "azerty", Pause = false };
+            context.Medecins.Add(dupont);
 
             context.SaveChanges();
         }

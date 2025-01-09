@@ -10,7 +10,11 @@ namespace HopitalEF
 {
     public class HopitalEFContext: DbContext
     {
+        public DbSet<Consultation> Consultations { get; set; }
+        public DbSet<Medecin> Medecins { get; set; }
+        public DbSet<Patient> Patients { get; set; }
         public DbSet<Salle> Salles { get; set; }
+        public DbSet<Secretaire> Secretaires { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,7 +28,35 @@ namespace HopitalEF
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Salle>().ToTable("salle").Ignore(s => s.Medecin);
+            modelBuilder.Entity<Consultation>().ToTable("consultation");
+
+            modelBuilder.Entity<Consultation>()
+                .HasOne(c => c.Medecin)
+                .WithMany(m => m.Consultations);
+
+            modelBuilder.Entity<Consultation>()
+                .HasOne(c => c.Patient)
+                .WithMany(p => p.Consultations);
+
+            modelBuilder.Entity<Salle>().ToTable("salle");
+            modelBuilder.Entity<Salle>()
+                .HasOne(c => c.Medecin)
+                .WithOne(m => m.Salle)
+                .HasForeignKey<Salle>(s => s.MedecinId);
+
+            modelBuilder.Entity<Personne>().ToTable("personne")
+                .HasDiscriminator<string>("type")
+                .HasValue<Patient>("patient")
+                .HasValue<Medecin>("medecin")
+                .HasValue<Secretaire>("secretaire");
+
+            modelBuilder.Entity<Employe>();
+
+            modelBuilder.Entity<Secretaire>();
+
+            modelBuilder.Entity<Medecin>();
+
+            modelBuilder.Entity<Patient>();
         }
     }
 }

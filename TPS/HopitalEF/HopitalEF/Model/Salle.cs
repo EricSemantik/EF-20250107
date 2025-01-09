@@ -11,6 +11,7 @@ namespace HopitalEF.Model
         public int Id { get; set; } 
         public string Nom { get; set; }
         public bool Dispo { get; set; }
+        public int? MedecinId { get; set; } 
         public Medecin? Medecin { get; set; }
 
         public override string? ToString()

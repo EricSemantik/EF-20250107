@@ -13,7 +13,9 @@ namespace HopitalEF.Model
         public string Motif { get; set; }
         public string? CompteRendu { get; set; }
         public float Tarif { get; set; }
+        public int? PatientId { get; set; }
         public Patient? Patient { get; set; }
+        public int? MedecinId { get; set; }
         public Medecin? Medecin { get; set; }
 
 
