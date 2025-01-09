@@ -133,3 +133,25 @@ CREATE TABLE adress (
 ```
 
 - Modifier le Program pout vérifier le bon fonctionnement
+
+## Atelier 5
+
+- Créer une classe Compte avec :
+
+```c#
+public class Compte
+	public int CompteId { get ; set ;}
+	public decimal Solde { get ; set ;}
+	public int ClientId { get ; set ;}
+	public Client Client { get ; set ;}
+}
+```
+
+- Modifier la classe Client en y ajoutant une liste de comptes :
+
+```c#
+public List<Compte> Comptes { get ; set ;}
+```
+
+- Effectuer le mapping en Fluent API entre Compte.Client et Client.Comptes
+- Modifier le Program pour créer deux comptes et les associer au client préalablement créé
