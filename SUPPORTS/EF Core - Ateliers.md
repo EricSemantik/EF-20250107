@@ -155,3 +155,12 @@ public List<Compte> Comptes { get ; set ;}
 
 - Effectuer le mapping en Fluent API entre Compte.Client et Client.Comptes
 - Modifier le Program pour créer deux comptes et les associer au client préalablement créé
+
+## Atelier 6
+
+- Créer un projet en vue d'effectuer un Scaffolding
+
+```
+Scaffold-DbContext -Connection "Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Hopital_EF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" -Provider Microsoft.EntityFrameworkCore.SqlServer -Project HopitalEFDBFirst
+```
+
