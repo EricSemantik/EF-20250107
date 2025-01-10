@@ -164,3 +164,32 @@ public List<Compte> Comptes { get ; set ;}
 Scaffold-DbContext -Connection "Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Hopital_EF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" -Provider Microsoft.EntityFrameworkCore.SqlServer -Project HopitalEFDBFirst
 ```
 
+## Atelier 7
+
+Dans le projet HopitalEF, modifier le Program pour exécuter au sein d'une transaction :
+
+1. Créer trois salles 
+2. Créer deux médecin et associer un des deux à une salle
+3. Créer un patient 
+4. Créer une consultation et l'associer au médecin qui a une salle et au patient
+5. Créer une secrétaire
+
+## Atelier 8
+
+Dans le projet HopitalEF, créer une classe qui contiendra un Main (comme Program) :
+
+- Lister toutes les salles
+- Lister toutes les salles disponibles
+- Lister pour toutes les consultations : 
+  - date de consultation
+  - motif
+  - nom et prénom du patient
+  - nom et prénom du médecin
+- Compter tous les Médecins qui n'ont pas de salle associé
+
+## Atelier 9
+
+Reprendre les Interfaces du projet HopitalConsoleMatmut:
+
+- IRepository et ISalleRepository 
+- Implémenter la classe SalleRepositoryEF qui utilisera HopitalEFContext 
